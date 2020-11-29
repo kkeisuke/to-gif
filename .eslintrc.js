@@ -14,8 +14,26 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    'vue/array-bracket-spacing': 'error',
+    'vue/arrow-spacing': 'error',
+    'vue/block-spacing': 'error',
+    'vue/brace-style': 'error',
+    'vue/camelcase': 'error',
+    'vue/component-name-in-template-casing': 'error',
+    'vue/eqeqeq': 'error',
+    'vue/key-spacing': 'error',
+    'vue/match-component-file-name': 'error',
+    'vue/object-curly-spacing': ['error', 'always'],
+    'vue/script-indent': 'error',
+    'vue/space-infix-ops': 'error',
+    'vue/space-unary-ops': 'error',
+    'vue/v-on-function-call': 'error',
+    'no-console': 'warn',
+    'no-debugger': 'warn',
+    // for 3.v Syntax
+    'vue/no-v-model-argument': 'off',
+    'vue/no-multiple-template-root': 'off',
+    'vue/no-v-for-template-key': 'off'
   },
   overrides: [
     {
