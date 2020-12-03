@@ -13,11 +13,13 @@
     "@ffmpeg/core": "^0.8.5",
     "@ffmpeg/ffmpeg": "^0.9.6",
     "core-js": "^3.6.5",
+    "file-saver": "^2.0.5",
     "primevue": "^3.0.2",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.1",
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "@typescript-eslint/parser": "^4.8.2",
