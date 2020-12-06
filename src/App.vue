@@ -1,12 +1,18 @@
 <template>
-  <div></div>
+  <ToGifContext>
+    <ToGif />
+  </ToGifContext>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import ToGifContext from '@/components/ToGif/ToGifContext.vue'
+import ToGif from '@/components/ToGif/ToGif.vue'
 
 export default defineComponent({
-  name: 'App',
-  components: {}
+  components: {
+    ToGifContext,
+    ToGif
+  }
 })
 </script>
