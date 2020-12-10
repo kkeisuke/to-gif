@@ -1,4 +1,4 @@
-import { inject, provide, reactive } from 'vue'
+import { inject, provide, reactive, readonly } from 'vue'
 
 const UseImage = () => {
   const image = reactive({
@@ -10,13 +10,13 @@ const UseImage = () => {
 
   const create = (buffer: Uint8Array, name: string) => {
     const blob = new Blob([buffer], { type: 'image/gif' })
-    image.src = URL.createObjectURL(blob)
+    image.src = URL.createObjectURL?.(blob)
     image.size = Math.floor(blob.size / 1000)
     image.name = `${name}.${image.ext}`
   }
 
   return {
-    image,
+    image: readonly(image),
     create
   }
 }

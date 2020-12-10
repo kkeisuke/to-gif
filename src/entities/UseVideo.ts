@@ -1,4 +1,4 @@
-import { inject, provide, ref } from 'vue'
+import { inject, provide, readonly, ref } from 'vue'
 
 const UseVideo = () => {
   const file = ref<File | null>(null)
@@ -8,7 +8,7 @@ const UseVideo = () => {
   }
 
   return {
-    file,
+    file: readonly(file),
     setFile
   }
 }

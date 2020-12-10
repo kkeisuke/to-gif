@@ -1,4 +1,4 @@
-import { computed, inject, provide, readonly } from 'vue'
+import { computed, inject, provide } from 'vue'
 import { injectUseVideo } from '@/entities/UseVideo'
 import { injectUseImage } from '@/entities/UseImage'
 import { injectUseOption } from '@/entities/UseOption'
@@ -12,6 +12,9 @@ const UseToGif = () => {
   const userConvert = injectUseConvert()
   const useDownload = injectUseDownload()
 
+  // 初期化
+  userConvert.load()
+
   const invoke = async (video: File) => {
     useVideo.setFile(video)
     const buffer = await userConvert.convert(video, useOption.option)
@@ -22,8 +25,8 @@ const UseToGif = () => {
   return {
     loading: computed(() => userConvert.loadingStatus.value === 'loading'),
     converting: computed(() => userConvert.convertStatus.value === 'converting'),
-    image: readonly(useImage.image),
-    video: readonly(useVideo.file),
+    image: useImage.image,
+    video: useVideo.file,
     option: useOption.option,
     invoke
   }

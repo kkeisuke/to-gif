@@ -2,16 +2,17 @@ import { inject, provide, readonly, ref } from 'vue'
 import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg'
 import type { ConvertOption } from '@/entities/UseOption'
 
-export type LoadingStatus = 'loading' | 'fail' | 'success'
+export type LoadingStatus = 'ready' | 'loading' | 'fail' | 'success'
 export type ConvertStatus = 'ready' | 'converting' | 'fail' | 'success'
 
 const UseConvert = () => {
   const ffmpeg = createFFmpeg()
-  const loadingStatus = ref<LoadingStatus>('loading')
+  const loadingStatus = ref<LoadingStatus>('ready')
   const convertStatus = ref<ConvertStatus>('ready')
 
   const load = async () => {
     try {
+      loadingStatus.value = 'loading'
       await ffmpeg.load()
       loadingStatus.value = 'success'
     } catch (error) {
@@ -43,11 +44,10 @@ const UseConvert = () => {
     }
   }
 
-  load()
-
   return {
     loadingStatus: readonly(loadingStatus),
     convertStatus: readonly(convertStatus),
+    load,
     convert
   }
 }
