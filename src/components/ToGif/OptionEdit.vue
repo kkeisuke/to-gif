@@ -44,7 +44,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-::v-deep .p-toolbar-group-left {
+:deep(.p-toolbar-group-left) {
   width: 100%;
 }
 </style>
