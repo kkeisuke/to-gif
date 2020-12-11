@@ -1,7 +1,8 @@
 <template>
-  <div class="FileUpLoad p-d-flex p-jc-center p-ai-center" @drop.prevent="onUpload" @dragover.prevent="">
-    <p v-show="!image.size" class="description">Drag and drop files to here. Convert video to gif images</p>
-    <img :src="image.src" v-show="image.size" :alt="image.name" :title="image.name" class="preview" />
+    <!-- id for E2E test -->
+  <div id="FileUpLoad" class="FileUpLoad p-d-flex p-jc-center p-ai-center" @drop.prevent="onUpload" @dragover.prevent="">
+    <p v-show="!image.size" id="description" class="description">Drag and drop files to here. Convert video to gif images</p>
+    <img :src="image.src" v-show="image.size" :alt="image.name" :title="image.name" id="preview" class="preview" />
     <div v-show="converting" class="progressbar">
       <ProgressBar mode="indeterminate" />
     </div>
