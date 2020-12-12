@@ -11,7 +11,7 @@ toGif is a desktop PWA that converts videos to gif animations.
 - Vue CLI
 - TypeScript
 - ffmpeg.wasm
-- primevue
+- PrimeVue
 
 etc...
 
