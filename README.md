@@ -1,4 +1,21 @@
-# to-gif
+# toGif
+
+toGif is a desktop PWA that converts videos to gif animations.
+
+![test](https://github.com/kkeisuke/to-gif/workflows/Test/badge.svg)
+
+## Features
+
+- PWA (Desktop)
+- Vue3
+- Vue CLI
+- TypeScript
+- ffmpeg.wasm
+- primevue
+
+etc...
+
+![screenshot](screenshot.gif)
 
 ## Project setup
 ```
