@@ -5,6 +5,7 @@ describe('toGif', () => {
   })
 
   it('video convert', () => {
+    cy.get('#preview').should('have.css', 'display', 'none')
     cy.get('#description').should('have.css', 'display', 'block')
     cy.get('#FileUpLoad').attachFile({ filePath: 'mock.mp4', encoding: 'binary', mimeType: 'application/octet-stream' }, { subjectType: 'drag-n-drop' })
     cy.get('#imageName').contains('mock.mp4.gif')
