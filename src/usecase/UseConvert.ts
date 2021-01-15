@@ -30,7 +30,7 @@ const UseConvert = () => {
 
       ffmpeg.FS('writeFile', src, await fetchFile(video))
       await ffmpeg.run(...command)
-      const { buffer }: { buffer: Uint8Array } = ffmpeg.FS('readFile', output)
+      const buffer = ffmpeg.FS('readFile', output)
 
       ffmpeg.FS('unlink', src)
       ffmpeg.FS('unlink', output)
