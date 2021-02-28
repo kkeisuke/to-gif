@@ -1,5 +1,5 @@
 <template>
-  <BlockUI :blocked="loading" :fullScreen="true" />
+  <BlockUI :blocked="loading" :full-screen="true" />
 </template>
 
 <script lang="ts">
