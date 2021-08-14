@@ -1,6 +1,6 @@
 <template>
   <!-- id for E2E test -->
-  <div id="FileUpLoad" class="FileUpLoad p-d-flex p-jc-center p-ai-center" @drop.prevent="onUpload" @dragover.prevent="">
+  <div id="FileUpLoad" class="FileUpLoad flex justify-content-center align-items-center" @drop.prevent="onUpload" @dragover.prevent="">
     <p v-show="!image.size" id="description" class="description">Drag and drop files to here. Convert video to gif images</p>
     <img v-show="image.size" id="preview" :src="image.src" :alt="image.name" :title="image.name" class="preview" />
     <div v-show="converting" class="progressbar">

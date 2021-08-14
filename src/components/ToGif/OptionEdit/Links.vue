@@ -1,8 +1,8 @@
 <template>
-  <div class="Links p-d-flex">
+  <div class="Links flex">
     <a href="https://kkeisuke.com" target="_blank" rel="noopener noreferrer" class="pi pi-home"></a>
-    <a href="https://github.com/kkeisuke" target="_blank" rel="noopener noreferrer" class="pi pi-github p-ml-2"></a>
-    <a href="https://twitter.com/kkeisuke" target="_blank" rel="noopener noreferrer" class="pi pi-twitter p-ml-2"></a>
+    <a href="https://github.com/kkeisuke" target="_blank" rel="noopener noreferrer" class="pi pi-github ml-2"></a>
+    <a href="https://twitter.com/kkeisuke" target="_blank" rel="noopener noreferrer" class="pi pi-twitter ml-2"></a>
   </div>
 </template>
 

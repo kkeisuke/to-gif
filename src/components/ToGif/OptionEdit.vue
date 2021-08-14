@@ -2,13 +2,13 @@
   <Toolbar>
     <template #left>
       <InputFPS />
-      <Button :disabled="!image.size" icon="pi pi-download" class="p-button-rounded p-button-text p-ml-1" @click="download" />
-      <div v-show="image.size" class="p-ml-3">
+      <Button :disabled="!image.size" icon="pi pi-download" class="p-button-rounded p-button-text ml-2" @click="download" />
+      <div v-show="image.size" class="ml-3">
         <!-- id for E2E test -->
         <span id="imageName">{{ image.name }}</span>
-        <span id="imageSize" class="p-ml-3">{{ Number(image.size).toLocaleString() }} KB</span>
+        <span id="imageSize" class="ml-3">{{ Number(image.size).toLocaleString() }} KB</span>
       </div>
-      <Links class="p-ml-auto" />
+      <Links class="ml-auto" />
     </template>
   </Toolbar>
 </template>
